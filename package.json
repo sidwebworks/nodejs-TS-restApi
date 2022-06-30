@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/mongodb": "^4.0.7",
+    "@types/mongoose": "^5.11.97",
     "bcrypt": "^5.0.1",
     "config": "^3.3.7",
     "cors": "^2.8.5",
