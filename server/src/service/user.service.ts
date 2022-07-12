@@ -5,11 +5,10 @@ import config from "config"
 import axios from "axios";
 import qs from 'querystring'
 import log from "../utils/logger";
+import { CreateUserInput } from "../schema/user.schema";
 
 export async function createUser(
-  input: DocumentDefinition<
-    Omit<UserDocument, "createdAt" | "updatedAt" | "comparePassword">
-  >
+  input: CreateUserInput['body']
 ) {
   try {
     const user = await UserModel.create(input);

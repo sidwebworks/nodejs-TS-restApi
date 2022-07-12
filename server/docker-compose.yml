@@ -3,7 +3,8 @@ services:
   rest-api:
     container_name: rest-api
     restart: unless-stopped
+    ports:
+      - 1337:1337
     environment:
       - NODE_ENV=production
-    build:
-        context: ./
+    build: .

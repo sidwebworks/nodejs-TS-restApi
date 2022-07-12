@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
@@ -24,8 +25,8 @@
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
     "mongodb-memory-server": "^8.7.2",
-    "mongoose": "^6.4.0",
-    "nanoid": "^3.3.2",
+    "mongoose": "^6.4.4",
+    "nanoid": "^3.3.4",
     "pino": "^8.1.0",
     "pino-pretty": "^8.1.0",
     "prom-client": "^14.0.1",
@@ -45,7 +46,7 @@
     "@types/jsonwebtoken": "^8.5.8",
     "@types/lodash": "^4.14.182",
     "@types/nanoid": "^3.0.0",
-    "@types/node": "^18.0.0",
+    "@types/node": "^18.0.3",
     "@types/pino": "^7.0.5",
     "@types/response-time": "^2.3.5",
     "@types/supertest": "^2.0.12",

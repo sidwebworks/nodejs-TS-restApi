@@ -1,18 +1,16 @@
-FROM node:14
+FROM node:16
 
-ADD package.json /tmp/package.json
+WORKDIR /app
 
-ADD yarn.lock /tmp/yarn.lock
+COPY package.json yarn.lock ./
 
-RUN rm -rf build
+RUN yarn install
 
-RUN cd /tmp && yarn install
+COPY src ./src
 
-ADD ./ /src
+COPY config ./config
 
-RUN rm -rf src/node_modules && cp -a /tmp/node_modules /src/
-
-WORKDIR /src
+COPY tsconfig.json .
 
 RUN yarn build
 
