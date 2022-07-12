@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  rest-api:
+    container_name: rest-api
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    build:
+        context: ./
